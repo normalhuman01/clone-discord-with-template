@@ -1,0 +1,28 @@
+@use '../../styles/partials/colors' as clr;
+@use '../../styles/partials/custom-media' as *;
+@use '../../styles/partials/component-sizes' as size;
+
+.sidebar {
+  background-color: clr.$primary-medium-transparent;
+  height: 100%;
+}
+
+.listWrapper {
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+}
+
+.scroller {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+}
+
+.scrollerInner {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+
+  padding: 0.5rem;
+}

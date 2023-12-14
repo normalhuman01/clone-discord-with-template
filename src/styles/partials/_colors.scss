@@ -1,0 +1,27 @@
+$primary-light: hsl(210, 20%, 16%);
+$primary-medium: hsl(208, 21%, 12%);
+$primary-dark: hsl(206, 20%, 7%);
+$primary-darker: hsl(200, 18%, 3%);
+
+$primary-light-transparent: transparentize(
+  $color: $primary-light,
+  $amount: 0.3,
+);
+$primary-medium-transparent: transparentize(
+  $color: $primary-medium,
+  $amount: 0.3,
+);
+$primary-dark-transparent: transparentize(
+  $color: $primary-dark,
+  $amount: 0.3,
+);
+$primary-darker-transparent: transparentize(
+  $color: $primary-darker,
+  $amount: 0.3,
+);
+
+$secondary-light: hsl(0, 0%, 100%);
+$secondary-medium: hsl(240, 2%, 80%);
+$secondary-dark: hsl(213, 4%, 57%);
+
+$info: hsl(209, 80%, 60%);

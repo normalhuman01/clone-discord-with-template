@@ -1,0 +1,51 @@
+@use '../partials/colors' as clr;
+@use '../partials/custom-media' as *;
+@use '../partials/component-sizes' as size;
+@use '../partials/placeholder-selectors';
+
+.primaryContainer {
+  background-image: url(/img/background-alt.webp);
+  @extend %full-size-background;
+  @extend %darker-background;
+
+  overflow-wrap: break-word;
+  user-select: none;
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(0.25rem);
+
+  /* For some reason, the backdrop gets on top of its siblings, and setting
+  their z-index to 0 solves the problem */
+  & ~ * {
+    z-index: 0;
+  }
+}
+
+.secondaryContainer {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3rem 1fr;
+}
+
+@include custom-media(max, lg) {
+  .desktopOnlyMenu {
+    display: none !important;
+  }
+}
+
+@include custom-media(min, lg) {
+  .primaryContainer {
+    grid-template-columns: size.$navigations-width 1fr;
+  }
+
+  .secondaryContainer {
+    grid-template-columns: 1fr size.$user-list-width;
+  }
+}

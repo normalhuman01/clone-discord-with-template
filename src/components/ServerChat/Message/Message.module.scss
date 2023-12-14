@@ -1,0 +1,124 @@
+@use '../../../styles/partials/colors' as clr;
+@use '../../../styles/partials/font-sizes' as fs;
+@use '../../../styles/partials/placeholder-selectors';
+@use '../../../styles/partials/custom-media' as *;
+
+$avatar-width: 40px;
+
+.message {
+  position: relative;
+
+  padding-left: calc($avatar-width + 1.5rem);
+  padding-right: 1rem;
+
+  &:is(:hover, :focus-within) {
+    background-color: clr.$primary-darker-transparent;
+
+    .timeStampTooltip {
+      opacity: 1;
+    }
+
+    .buttons {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+.avatar,
+.username {
+  cursor: pointer;
+}
+
+.avatar {
+  position: absolute;
+  left: 1rem;
+  width: $avatar-width;
+  aspect-ratio: 1/1;
+
+  margin-top: 0.25rem;
+  border-radius: 50%;
+}
+
+.header {
+  font-size: fs.$medium;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.5rem;
+
+  margin-top: 1rem;
+
+  & button {
+    font-weight: 500;
+  }
+}
+
+.usernameButton {
+  @extend %text-ellipsis;
+
+  &:is(:hover, :focus-visible) {
+    text-decoration: underline;
+  }
+}
+
+.timeStamp,
+.timeStampTooltip {
+  font-size: 0.7rem;
+  letter-spacing: -0.5px;
+  font-weight: normal;
+  color: clr.$secondary-dark;
+}
+
+.timeStampTooltip,
+.buttons {
+  position: absolute;
+
+  opacity: 0;
+}
+
+.timeStampTooltip {
+  user-select: none;
+
+  top: 0.25rem;
+  left: 0.5rem;
+}
+
+.content {
+  color: clr.$secondary-medium;
+  white-space: break-spaces;
+  padding-bottom: 0.25rem;
+
+  a {
+    color: clr.$info;
+    text-decoration: none;
+
+    &:is(:hover, :focus-visible) {
+      text-decoration: underline;
+    }
+  }
+}
+
+.buttons {
+  right: 1rem;
+  top: calc(1rem * -1);
+  pointer-events: none;
+
+  img {
+    border: 2px solid white;
+    border-radius: 5px;
+
+    cursor: pointer;
+  }
+}
+
+@include custom-media(max, sm) {
+  .header {
+    margin-top: 0.5rem;
+  }
+
+  .content {
+    font-size: 0.875rem;
+  }
+}

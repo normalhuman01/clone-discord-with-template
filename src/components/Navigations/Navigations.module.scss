@@ -1,0 +1,8 @@
+@use '../../styles/partials/custom-media' as *;
+@use '../../styles/partials/component-sizes' as size;
+
+.container {
+  display: grid;
+  grid-template-columns: size.$server-list-width 1fr;
+  height: 100%;
+}

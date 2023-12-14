@@ -1,0 +1,85 @@
+@use '../../styles/partials/colors' as clr;
+@use '../../styles/partials/font-sizes' as fs;
+@use '../../styles/partials/component-sizes' as size;
+@use '../../styles/partials/custom-media' as *;
+@use '../../styles/partials/placeholder-selectors';
+
+.header {
+  background-color: clr.$primary-dark-transparent;
+
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  @extend %top-section;
+}
+
+.dialogContentContainer {
+  position: fixed;
+  inset: 0;
+}
+
+.dialogContent {
+  width: fit-content;
+  height: 100%;
+  box-shadow: 0 0 10px -2px clr.$primary-darker;
+}
+
+.dialogContentRightSide {
+  margin-left: auto;
+}
+
+.userList {
+  width: size.$navigations-width;
+  margin-left: auto;
+}
+
+.title {
+  font-size: fs.$medium;
+}
+
+.signOutButton {
+  background-color: clr.$secondary-light;
+
+  color: clr.$primary-dark;
+
+  padding: 0.25rem 1rem;
+  margin-left: auto;
+  border-radius: 0.25rem;
+
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:is(:hover, :focus-visible) {
+    opacity: 0.6;
+  }
+}
+
+.mobileMenuButton,
+.mobileUserListButton {
+  display: none;
+}
+
+@include custom-media(max, lg) {
+  .mobileMenuButton,
+  .mobileUserListButton {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: block;
+
+    height: 100%;
+    aspect-ratio: 1;
+  }
+
+  .mobileMenuButton {
+    background-image: url(/icons/menu-icon.svg);
+  }
+
+  .mobileUserListButton {
+    background-image: url(/icons/people-icon.svg);
+  }
+}

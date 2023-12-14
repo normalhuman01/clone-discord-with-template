@@ -1,0 +1,55 @@
+@use '../../../styles/partials/colors' as clr;
+
+$avatar-width: 40px;
+
+.message {
+  position: relative;
+
+  padding-left: calc($avatar-width + 1.5rem);
+  padding-right: 1rem;
+  margin-top: 1rem;
+
+  &:nth-child(2n) {
+    .header {
+      width: 10rem;
+    }
+  }
+
+  &:nth-child(3n) {
+    .header {
+      width: 5rem;
+    }
+  }
+}
+
+.avatar,
+.header,
+.content {
+  background-color: clr.$primary-light-transparent;
+}
+
+.avatar {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  width: $avatar-width;
+  aspect-ratio: 1/1;
+
+  border-radius: 50%;
+}
+
+.header,
+.content {
+  border-radius: 10px;
+}
+
+.header {
+  width: 15rem;
+  height: 20px;
+
+  margin-bottom: 1rem;
+}
+
+.content {
+  height: 50px;
+}

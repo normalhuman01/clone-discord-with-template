@@ -1,0 +1,40 @@
+@use '../../styles/partials/colors' as clr;
+
+.content {
+  background-color: clr.$primary-dark-transparent;
+
+  user-select: text;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  max-height: 100%;
+}
+
+.chatWrapper {
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+}
+
+.scroller {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+}
+
+.scrollerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.scrollerInner {
+  min-height: 0;
+}
+
+.scrollerSpacer {
+  height: 1rem;
+}

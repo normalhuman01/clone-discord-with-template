@@ -1,0 +1,31 @@
+@use './colors' as clr;
+
+%flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%full-size-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+%darker-background {
+  background-color: rgb(0, 0, 0, 0.2);
+  background-blend-mode: darken;
+}
+
+%text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+%top-section {
+  height: 3rem;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid clr.$primary-dark-transparent;
+}

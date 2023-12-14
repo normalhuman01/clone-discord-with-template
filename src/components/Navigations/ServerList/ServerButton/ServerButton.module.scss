@@ -1,0 +1,26 @@
+.button {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  transition-property: border-radius;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  cursor: pointer;
+
+  &:is(:hover, :focus-visible) {
+    border-radius: 16px;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

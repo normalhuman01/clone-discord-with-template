@@ -1,0 +1,16 @@
+@use '../../../../styles/partials/colors' as clr;
+@use '../../../../styles/partials/font-sizes' as fs;
+
+.list {
+  margin: 0.5rem 1rem;
+}
+
+.title {
+  font-size: fs.$small;
+  color: clr.$secondary-dark;
+  text-transform: uppercase;
+
+  display: block;
+
+  margin-bottom: 0.25rem;
+}
