@@ -25,42 +25,36 @@ Inicialmente, el proyecto se desarrolló durante la inmersión, pero incluso des
 ## 📷 Capturas de pantalla
 
 <div align="center">
-  <img src="showcase/home-page.webp" alt="Página de inicio" width="90%" />
 </div>
 <p align="center">Página de inicio</p>
 
 <br />
 
 <div align="center">
-  <img src="showcase/chat-page.webp" alt="Página de chat" width="90%" />
 </div>
 <p align="center">Página de chat</p>
 
 <br />
 
 <div align="center">
-  <img src="showcase/user-profile.webp" alt="Página de chat con modal de perfil de usuario abierto" width="90%" />
 </div>
 <p align="center">Modal de perfil de usuario</p>
 
 <br />
 
 <div align="center">
-  <img src="showcase/mobile-chat-page.webp" alt="Página de chat en dispositivos móviles" height="600" />
 </div>
 <p align="center">Diseño móvil</p>
 
 <br />
 
 <div align="center">
-  <img src="showcase/mobile-navigation.webp" alt="Página de chat en dispositivos móviles con menú de navegación abierto" height="600" />
 </div>
 <p align="center">Menú de navegación móvil abierto</p>
 
 <br />
 
 <div align="center">
-  <img src="showcase/mobile-user-list.webp" alt="Página de chat en dispositivos móviles con menú de lista de usuarios móvil abierto" height="600" />
 </div>
 <p align="center">Menú de lista de usuarios móvil abierto</p>
 
