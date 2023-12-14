@@ -22,42 +22,6 @@ Inicialmente, el proyecto se desarrolló durante la inmersión, pero incluso des
 - Interfaz accesible e intuitiva
 - Renderizado del lado del servidor
 
-## 📷 Capturas de pantalla
-
-<div align="center">
-</div>
-<p align="center">Página de inicio</p>
-
-<br />
-
-<div align="center">
-</div>
-<p align="center">Página de chat</p>
-
-<br />
-
-<div align="center">
-</div>
-<p align="center">Modal de perfil de usuario</p>
-
-<br />
-
-<div align="center">
-</div>
-<p align="center">Diseño móvil</p>
-
-<br />
-
-<div align="center">
-</div>
-<p align="center">Menú de navegación móvil abierto</p>
-
-<br />
-
-<div align="center">
-</div>
-<p align="center">Menú de lista de usuarios móvil abierto</p>
-
 ## 📄 Licencia
 
 Este proyecto utiliza la licencia GNU GPL-3.0 &ndash; consulte el archivo [`COPYING`](COPYING) para más detalles.
